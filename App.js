@@ -8,14 +8,12 @@
 import React from 'react';
 
 import {View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import StackNavExample from './src/navigationComponent/StackNavExample';
 
 const App = () => {
-  return (
-    <View>
-      <StackNavExample />
-    </View>
-  );
+  return <StackNavExample />;
 };
 
 export default App;
