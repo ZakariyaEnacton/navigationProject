@@ -3,7 +3,8 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from '../screens/stackNavigationScreens/Login';
-import Home from '../screens/stackNavigationScreens/Home';
+import Home from '../screens/drawerNavigationScreens/Main';
+import Main from '../screens/drawerNavigationScreens/Main';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,7 +22,12 @@ const StackNavExample = () => {
           },
           headerTitleStyle: {fontSize: 20},
         }}>
-        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{headerShown: false}}
+        />
+        {/* <Stack.Screen name="Login" component={Login} />
         <Stack.Screen
           name="Home"
           component={Home}
@@ -44,7 +50,7 @@ const StackNavExample = () => {
               backgroundColor: 'lightgreen',
             },
           }}
-        />
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
