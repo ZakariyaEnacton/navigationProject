@@ -8,9 +8,7 @@
 import React from 'react';
 
 import {View} from 'react-native';
-
-import NativeStackNavExample from './src/navigationComponent/StackNavExample';
-
+import NativeStackNavExample from '.././navigationProject/src/navigationComponent/NativeStackNavExample';
 const App = () => {
   return <NativeStackNavExample />;
 };
