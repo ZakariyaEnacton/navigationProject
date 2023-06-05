@@ -25,4 +25,8 @@ export default homeStyle = StyleSheet.create({
     marginBottom: 5,
   },
   getTextPass: {},
+  button: {
+    padding: 10,
+    marginTop: 10,
+  },
 });
