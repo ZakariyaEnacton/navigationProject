@@ -4,7 +4,7 @@ import React from 'react';
 const Screen1 = () => {
   return (
     <View>
-      <Text>Screen1</Text>
+      <Text>Screen 1</Text>
     </View>
   );
 };
