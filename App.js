@@ -8,10 +8,15 @@
 import React from 'react';
 
 import {View} from 'react-native';
-import NativeStackNavExample from '.././navigationProject/src/navigationComponent/NativeStackNavExample';
+
 import TabNavigator from './src/navigationComponent/TabNavigator';
+import AppNavigation from './src/components/AppNavigation';
 const App = () => {
-  return <TabNavigator />;
+  return (
+    <View style={{flex: 1}}>
+      <AppNavigation />
+    </View>
+  );
 };
 
 export default App;
