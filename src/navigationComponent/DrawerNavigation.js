@@ -1,19 +1,22 @@
 import React from 'react';
-import {} from 'react-native';
+import {TouchableOpacity, View, Text} from 'react-native';
 import 'react-native-gesture-handler';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import About from '../screens/drawerScreen/About';
-import Main from '../screens/drawerScreen/Main';
+import Home from '../screens/stackNavigationScreens/Home';
 
 const Drawer = createDrawerNavigator();
-
-const DrawerNavigation = () => {
+const DrawerNavigation = props => {
+  console.log('props -------------: ', props);
   return (
     <Drawer.Navigator>
       <Drawer.Screen
         name="Main"
-        component={Main}
-        options={{headerShown: false}}
+        component={Home}
+        initialParams={props.route.params}
+        options={{
+          headerShown: false,
+        }}
       />
       <Drawer.Screen
         name="About"
