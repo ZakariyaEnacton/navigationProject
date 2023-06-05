@@ -1,10 +1,11 @@
 import {View, Text} from 'react-native';
 import React from 'react';
+import ScreenStyle from '../../style/ScreenStyle';
 
 const Screen3 = () => {
   return (
-    <View>
-      <Text>Screen3</Text>
+    <View style={ScreenStyle.view}>
+      <Text style={ScreenStyle.text}>Profile</Text>
     </View>
   );
 };
