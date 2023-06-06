@@ -11,10 +11,12 @@ import {View} from 'react-native';
 
 import TabNavigator from './src/navigationComponent/TabNavigator';
 import AppNavigation from './src/components/AppNavigation';
+import FormikExample from './src/formik and yup/FormikExample';
 const App = () => {
   return (
     <View style={{flex: 1}}>
-      <AppNavigation />
+      {/* <AppNavigation /> */}
+      <FormikExample />
     </View>
   );
 };
