@@ -3,6 +3,8 @@ import React from 'react';
 import {Formik} from 'formik';
 import formikStyle from '../style/fromikFromStyle';
 import * as Yup from 'yup';
+import {signUp} from '../redux/action';
+import {useDispatch} from 'react-redux';
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
@@ -30,7 +32,16 @@ const SignupSchema = Yup.object().shape({
     .matches(/^[0-9]+$/, `Contain only digit`),
 });
 
-const FormikExample = () => {
+const FormikExample = ({navigation}) => {
+  const dispatch = useDispatch();
+
+  const handleSignUp = values => {
+    // console.log(values);
+    console.log('pressed');
+    dispatch(signUp(values));
+    navigation.navigate('ReduxHome');
+  };
+
   return (
     <Formik
       initialValues={{
@@ -41,18 +52,10 @@ const FormikExample = () => {
         mobile: '',
       }}
       validationSchema={SignupSchema}
-      onSubmit={values =>
-        console.log(
-          // 'Values----------------------',
-          // values,
-          ' name---',
-          values.name,
-          ' email---',
-          values.email,
-          ' mobile---',
-          values.mobile,
-        )
-      }>
+      onSubmit={info => {
+        // console.log('i--------', info);
+        handleSignUp(info);
+      }}>
       {({
         values,
         errors,

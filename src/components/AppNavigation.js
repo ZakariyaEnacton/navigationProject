@@ -4,6 +4,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from '../screens/stackNavigationScreens/Login';
 import BottomNavigator from '../navigationComponent/BottomNavigator';
+import ReduxHome from '../screens/reduxScreens/ReduxHome';
+import FormikExample from '../formik and yup/FormikExample';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,13 +14,13 @@ const AppNavigation = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="Login"
-          component={Login}
+          name="FormikExample"
+          component={FormikExample}
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="Home"
-          component={BottomNavigator}
+          name="ReduxHome"
+          component={ReduxHome}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

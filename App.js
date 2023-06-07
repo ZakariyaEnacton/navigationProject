@@ -12,11 +12,15 @@ import {View} from 'react-native';
 import TabNavigator from './src/navigationComponent/TabNavigator';
 import AppNavigation from './src/components/AppNavigation';
 import FormikExample from './src/formik and yup/FormikExample';
+import {Provider} from 'react-redux';
+import data from './src/redux/store';
 const App = () => {
   return (
     <View style={{flex: 1}}>
-      {/* <AppNavigation /> */}
-      <FormikExample />
+      <Provider store={data}>
+        <AppNavigation />
+      </Provider>
+      {/* <FormikExample /> */}
     </View>
   );
 };
