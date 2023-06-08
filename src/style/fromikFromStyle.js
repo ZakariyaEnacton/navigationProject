@@ -45,4 +45,17 @@ export default formikStyle = StyleSheet.create({
     fontSize: 18,
     fontWeight: 700,
   },
+  nextPageButton: {
+    marginTop: 20,
+    backgroundColor: '#395b64',
+    padding: 10,
+    borderRadius: 15,
+    justifyContent: 'center',
+  },
+  nextPageBtnTxt: {
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: 18,
+    fontWeight: 700,
+  },
 });

@@ -6,6 +6,7 @@ import Login from '../screens/stackNavigationScreens/Login';
 import BottomNavigator from '../navigationComponent/BottomNavigator';
 import ReduxHome from '../screens/reduxScreens/ReduxHome';
 import FormikExample from '../formik and yup/FormikExample';
+import Home from '../screens/stackNavigationScreens/Home';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,7 +22,7 @@ const AppNavigation = () => {
         <Stack.Screen
           name="ReduxHome"
           component={ReduxHome}
-          options={{headerShown: false}}
+          // options={{headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>

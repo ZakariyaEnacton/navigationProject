@@ -4,7 +4,7 @@ import {} from '@react-navigation/native';
 import {} from '@react-navigation/native-stack';
 import loginStyle from '../../style/loginComponentStyle';
 
-const Login = props => {
+const Login = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
   return (
@@ -31,7 +31,7 @@ const Login = props => {
             activeOpacity={0.7}
             style={loginStyle.button}
             onPress={() =>
-              props.navigation.navigate('Home', {email: email, pass: pass})
+              navigation.navigate('Home', {email: email, pass: pass})
             }>
             <Text style={loginStyle.buttonText}>Login</Text>
           </TouchableOpacity>

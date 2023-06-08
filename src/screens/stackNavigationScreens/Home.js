@@ -1,11 +1,10 @@
 import {View, Text, Touchable, TouchableOpacity} from 'react-native';
 import React from 'react';
 import homeStyle from '../../style/homeComponentStyle';
-import 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-const Home = (props, {route, navigation}) => {
-  const {email, pass} = props.route.params;
+const Home = ({route, navigation}) => {
+  const {email, pass} = route.params;
   console.log(route);
   console.log(navigation);
   return (
@@ -24,7 +23,7 @@ const Home = (props, {route, navigation}) => {
           onPress={() => props.navigation.openDrawer}
           activeOpacity={0.7}
           style={homeStyle.button}>
-          {console.log('nav-----------', props.navigation.openDrawer)}
+          {console.log('nav-----------', navigation.openDrawer)}
           <Text>Open Drawer</Text>
         </TouchableOpacity>
       </View>

@@ -2,19 +2,22 @@ import {View, Text} from 'react-native';
 import React from 'react';
 import {useSelector} from 'react-redux';
 
-const ReduxHome = ({route}) => {
-  // const {name, email, password, confirmPassword, mobile} = route.params;
-  // console.log('r-----', route.params);
+const ReduxHome = props => {
+  console.log('props-----', props);
 
-  const getData = useSelector(state => state);
-  console.log('----------', getData);
+  const getVal = useSelector(state => state);
+  console.log(getVal);
   return (
-    <View>
-      <Text>{name}</Text>
-      <Text>{email}</Text>
-      <Text>{password}</Text>
-      <Text>{confirmPassword}</Text>
-      <Text>{mobile}</Text>
+    <View style={{flex: 1}}>
+      {getVal.map(m => (
+        <Text>Name : {m.name}</Text>
+      ))}
+      {getVal.map(m => (
+        <Text>Email : {m.email}</Text>
+      ))}
+      {getVal.map(m => (
+        <Text>Mobile : {m.mobile}</Text>
+      ))}
     </View>
   );
 };

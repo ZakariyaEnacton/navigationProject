@@ -37,9 +37,9 @@ const FormikExample = ({navigation}) => {
 
   const handleSignUp = values => {
     // console.log(values);
-    console.log('pressed');
     dispatch(signUp(values));
     navigation.navigate('ReduxHome');
+    console.log('pressed');
   };
 
   return (
@@ -142,6 +142,12 @@ const FormikExample = ({navigation}) => {
                 {backgroundColor: !isValid ? '#a5c9ca' : '#395b64'},
               ]}>
               <Text style={formikStyle.submitBtnTxt}>Submit</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('ReduxHome')}
+              activeOpacity={0.7}
+              style={formikStyle.nextPageButton}>
+              <Text style={formikStyle.nextPageBtnTxt}>Click here</Text>
             </TouchableOpacity>
           </View>
         </View>

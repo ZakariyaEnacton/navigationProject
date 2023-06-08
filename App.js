@@ -19,8 +19,8 @@ const App = () => {
     <View style={{flex: 1}}>
       <Provider store={data}>
         <AppNavigation />
+        {/* <FormikExample /> */}
       </Provider>
-      {/* <FormikExample /> */}
     </View>
   );
 };
